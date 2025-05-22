@@ -1,12 +1,13 @@
+import HeroSection from "@/components/Hero";
 import Image from "next/image";
-import HeroSection from "../../ai-career-coach/components/hero";
 
 export default function Home() {
   return (
     <div>
-      <main>
+       <div className="grid-background" />
         <HeroSection />
-      </main>
+
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

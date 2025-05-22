@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DreamAlign
 
-## Getting Started
+**DreamAlign** is an AI-powered career coaching platform that helps users align their dreams with actionable career goals. It offers personalized guidance using generative AI, a clean onboarding process, and tools to explore, grow, and thrive in your career journey.
 
-First, run the development server:
+![DreamAlign Logo](public/logo.png)
+
+---
+
+## 🚀 Features
+
+- 🧠 AI-Powered Career Coach (Gemini API)
+- 🔐 Seamless authentication with Clerk
+- 🗺️ Personalized onboarding experience
+- 🎯 Career path alignment and strategy
+- 🌈 Light/Dark theme support
+- 📊 Data stored with PostgreSQL + Prisma
+- ⚡ Built with performance-focused Next.js 14
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js 14, Tailwind CSS
+- **Backend:** Prisma, PostgreSQL
+- **Auth:** Clerk.dev
+- **AI Integration:** Google Gemini API
+- **Deployment:** Vercel
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/chinonsochikelue/DreamAlign.git
+```
+
+```bash
+cd DreamAlign
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up your environment variables
+
+Create a `.env.local` file and add:
+
+```env
+DATABASE_URL=your_postgres_connection_string
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+### 4. Set up your database
+
+```bash
+npx prisma db push
+```
+
+---
+
+## 🧪 Run in Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to explore the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deploying
 
-## Learn More
+You can deploy on [Vercel](https://vercel.com):
 
-To learn more about Next.js, take a look at the following resources:
+1. Connect your GitHub repo.
+2. Add the same environment variables in Vercel settings.
+3. Vercel will handle the build and deploy automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
+MIT © [Chinonso Chikelue](https://github.com/chinonsochikelue)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

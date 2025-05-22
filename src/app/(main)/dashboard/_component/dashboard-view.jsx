@@ -6,4 +6,4 @@ function DashboardView() {
   )
 }
 
-export DashboardView
+export default DashboardView

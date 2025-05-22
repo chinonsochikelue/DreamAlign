@@ -14,7 +14,8 @@
 - 🎯 Career path alignment and strategy
 - 🌈 Light/Dark theme support
 - 📊 Data stored with PostgreSQL + Prisma
-- ⚡ Built with performance-focused Next.js 14
+- ⚡ Built with performance-focused Next.js 15
+- Modern UI using Shadcn component
 
 ---
 

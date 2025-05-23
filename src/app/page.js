@@ -1,13 +1,28 @@
+import Features from "@/components/Features";
 import HeroSection from "@/components/Hero";
+import Statistics from "@/components/Statistics";
+import HowItWorks from "@/components/HowItWorks";
 import Image from "next/image";
+import Testimonial from "@/components/Testimonial";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
     <div>
-       <div className="grid-background" />
-        <HeroSection />
+      <div className="grid-background" />
+      <HeroSection />
 
+      <Features />
 
+      <Statistics />
+
+      <HowItWorks />
+
+      <Testimonial />
+
+      <FAQ />
+
+      
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

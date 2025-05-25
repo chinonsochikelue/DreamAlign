@@ -30,10 +30,14 @@ const HeroSection = () => {
         <section className="w-full pt-36 md:pt-48 pb-10">
             <div className="space-y-6 text-center">
                 <div className="space-y-6 mx-auto">
-                    <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl gradient-title animate-gradient">
-                        Your AI Career Coach for
+                    <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl">
+                        <span className="wave-text" style={{ animationDelay: "0.2s" }}>
+                            Your AI Career Coach for
+                        </span>
                         <br />
-                        Professional Success
+                        <span className="wave-text" style={{ animationDelay: "0.5s" }}>
+                            Professional Success
+                        </span>
                     </h1>
                     <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
                         AI-powered career guidance personalized to your skills, goals, and aspirations.

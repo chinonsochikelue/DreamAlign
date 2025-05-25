@@ -120,3 +120,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wave-text {
+  display: inline-block;
+  background: linear-gradient(270deg, #38bdf8, #6366f1, #ec4899, #38bdf8);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waveGradient 5s ease-in-out infinite;
+}

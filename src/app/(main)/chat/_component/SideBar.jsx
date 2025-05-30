@@ -2,17 +2,13 @@
 
 import * as React from "react"
 import {
-  Clock,
   LogOut,
-  CheckCircle2,
-  XCircle,
   Menu,
 } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
 import {
   Sidebar,
   SidebarContent,
@@ -28,33 +24,9 @@ import {
   SidebarRail,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent } from "@/components/ui/tabs"
 import Link from "next/link"
 
-// Sample data for the attendance system
-const attendanceData = {
-  user: {
-    name: "Sarah Johnson",
-    role: "Teacher",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "SJ",
-  },
-  classes: [
-    { id: 1, name: "Mathematics 101", students: 32, attendanceRate: 92 },
-    { id: 2, name: "Computer Science", students: 28, attendanceRate: 88 },
-    { id: 3, name: "Physics", students: 24, attendanceRate: 78 },
-  ],
-  recentScans: [
-    { id: 1, name: "John Doe", time: "09:15 AM", status: "present" },
-    { id: 2, name: "Jane Smith", time: "09:18 AM", status: "present" },
-    { id: 3, name: "Mike Johnson", time: "09:32 AM", status: "late" },
-  ],
-  stats: {
-    present: 78,
-    absent: 12,
-    late: 10,
-  },
-}
 
 export function ModernSidebar() {
   const [user, setUser] = React.useState(null)
@@ -132,18 +104,11 @@ export function ModernSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
-        <SidebarFooter className="border-t p-4">
-          <Button variant="outline" className="w-full justify-start gap-2">
-            <LogOut className="h-4 w-4" />
-            Sign Out
-          </Button>
-        </SidebarFooter>
-        <SidebarRail />
       </Sidebar>
       <SidebarInset className="md:hidden h-8">
-        <SidebarTrigger className="md:hidden">
-          <Button variant="ghost" size="md">
-            <Menu className="h-20 w-20" />
+        <SidebarTrigger className="md:hidden" >
+          <Button variant="ghost" size="icon" className="w-8 h-8">
+            <Menu className="h-14 w-14" />
           </Button>
         </SidebarTrigger>
       </SidebarInset>

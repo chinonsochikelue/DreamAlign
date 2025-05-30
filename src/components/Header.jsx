@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { SignedIn, SignedOut, SignInButton, SignUp, SignUpButton, UserButton } from '@clerk/nextjs'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu'
 import { Button } from './ui/button'
-import { ChevronDown, FileText, GraduationCap, LayoutDashboard, MessageCircleMore, PenBox, StarsIcon } from 'lucide-react'
+import { ChevronDown, FileText, GraduationCap, Home, LayoutDashboard, MessageCircleMore, PenBox, StarsIcon } from 'lucide-react'
 import { checkUser } from '@/lib/checkUser'
 
 async function Header() {
@@ -15,13 +15,13 @@ async function Header() {
         <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
             <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* <Link href="/"> */}
-                    <Image
-                        src={"/logo.png"}
-                        alt="DreamAlign Logo"
-                        width={900}
-                        height={900}
-                        className="h-40 py-1 w-auto object-contain"
-                    />
+                <Image
+                    src={"/logo.png"}
+                    alt="DreamAlign Logo"
+                    width={900}
+                    height={900}
+                    className="h-40 -ml-4 md:ml-0 py-1 w-auto object-contain"
+                />
                 {/* </Link> */}
                 <div className="flex items-center space-x-2 md:space-x-4">
                     <SignedIn>
@@ -47,6 +47,12 @@ async function Header() {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end" className="w-48">
+                                <DropdownMenuItem asChild>
+                                    <Link href="/" className="flex items-center gap-2">
+                                        <Home className="h-4 w-4" />
+                                        Home
+                                    </Link>
+                                </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
                                     <Link href="/resume" className="flex items-center gap-2">
                                         <FileText className="h-4 w-4" />

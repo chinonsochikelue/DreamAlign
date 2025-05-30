@@ -100,17 +100,11 @@ export function ModernSidebar() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between px-4 py-3">
-          </div>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupContent>
               <Tabs defaultValue="navigation" className="w-full">
-                <TabsList className="grid w-full grid-cols-2">
-                  <TabsTrigger value="navigation">Chat History</TabsTrigger>
-                  <TabsTrigger value="attendance">Interviews</TabsTrigger>
-                </TabsList>
                 <TabsContent value="navigation" className="mt-2">
                   <SidebarMenu>
 
@@ -134,67 +128,6 @@ export function ModernSidebar() {
 
                   </SidebarMenu>
                 </TabsContent>
-                <TabsContent value="attendance" className="mt-2 space-y-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-sm">
-                      <div className="font-medium">Today's Attendance</div>
-                      <div className="text-xs text-muted-foreground">Total: 100</div>
-                    </div>
-                    <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                      <div className="space-y-1 rounded-md bg-green-50 p-2 dark:bg-green-950">
-                        <CheckCircle2 className="mx-auto h-4 w-4 text-green-500" />
-                        <div className="font-medium text-green-600 dark:text-green-400">Present</div>
-                        <div>{attendanceData.stats.present}</div>
-                      </div>
-                      <div className="space-y-1 rounded-md bg-red-50 p-2 dark:bg-red-950">
-                        <XCircle className="mx-auto h-4 w-4 text-red-500" />
-                        <div className="font-medium text-red-600 dark:text-red-400">Absent</div>
-                        <div>{attendanceData.stats.absent}</div>
-                      </div>
-                      <div className="space-y-1 rounded-md bg-yellow-50 p-2 dark:bg-yellow-950">
-                        <Clock className="mx-auto h-4 w-4 text-yellow-500" />
-                        <div className="font-medium text-yellow-600 dark:text-yellow-400">Late</div>
-                        <div>{attendanceData.stats.late}</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium">Recent Scans</div>
-                    <div className="space-y-2">
-                      {attendanceData.recentScans.map((scan) => (
-                        <div key={scan.id} className="flex items-center justify-between rounded-md border p-2 text-sm">
-                          <div className="flex items-center gap-2">
-                            {scan.status === "present" ? (
-                              <CheckCircle2 className="h-4 w-4 text-green-500" />
-                            ) : scan.status === "late" ? (
-                              <Clock className="h-4 w-4 text-yellow-500" />
-                            ) : (
-                              <XCircle className="h-4 w-4 text-red-500" />
-                            )}
-                            <span>{scan.name}</span>
-                          </div>
-                          <span className="text-xs text-muted-foreground">{scan.time}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium">Class Attendance</div>
-                    <div className="space-y-3">
-                      {attendanceData.classes.map((cls) => (
-                        <div key={cls.id} className="space-y-1">
-                          <div className="flex items-center justify-between text-xs">
-                            <span>{cls.name}</span>
-                            <span>{cls.attendanceRate}%</span>
-                          </div>
-                          <Progress value={cls.attendanceRate} className="h-1.5" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </TabsContent>
               </Tabs>
             </SidebarGroupContent>
           </SidebarGroup>
@@ -209,8 +142,8 @@ export function ModernSidebar() {
       </Sidebar>
       <SidebarInset className="md:hidden h-8">
         <SidebarTrigger className="md:hidden">
-          <Button variant="ghost" size="icon">
-            <Menu className="h-5 w-5" />
+          <Button variant="ghost" size="md">
+            <Menu className="h-20 w-20" />
           </Button>
         </SidebarTrigger>
       </SidebarInset>

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
 
 export default function ChatMessages({ messages, user }) {
     return (
@@ -32,13 +33,13 @@ export default function ChatMessages({ messages, user }) {
                                 />
                             )}
 
-                            <div className={`max-w-[80%] px-4 py-3 rounded-2xl shadow-md text-sm whitespace-pre-wrap
+                            <div className={`max-w-[80%] px-4 py-3 flex flex-wrap overscroll-none rounded-2xl shadow-md text-sm whitespace-pre-wrap
                                 ${isUser
                                     ? 'bg-blue-500 text-white rounded-br-none'
                                     : 'bg-muted rounded-bl-none'
                                 }`}
                             >
-                                {msg.content}
+                                <ReactMarkdown>{msg.content}</ReactMarkdown>
                             </div>
 
                             {isUser && (

@@ -40,7 +40,7 @@ function page() {
       {/* <div className="fixed bottom-0 left-0 right-0 z-50 bg-background"> */}
       <div className="fixed bottom-0 md:left-70 left-0 right-0 bg-background">
         {/* Footer content can go here */}
-        <InputText onSend={handleSend} userId={user.id} />
+        <InputText onSend={handleSend} userId={user?.id} />
       </div>
     </div>
   )

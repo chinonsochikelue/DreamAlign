@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import InputText from '../../_component/Input';
 import { ModernSidebar } from '../../_component/SideBar';
+import ReactMarkdown from 'react-markdown'
 
 function Messages({ chat, chatId, user }) {
     const [messages, setMessages] = useState(chat.messages)
@@ -46,7 +47,7 @@ function Messages({ chat, chatId, user }) {
                                         : 'bg-muted rounded-bl-none'
                                     }`}
                                 >
-                                    {msg.content}
+                                    <ReactMarkdown>{msg.content}</ReactMarkdown>
                                 </div>
 
                                 {isUser && (

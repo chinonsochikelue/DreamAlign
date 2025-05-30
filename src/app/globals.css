@@ -45,71 +45,71 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: hsl(0, 0%, 100%);           /* oklch(1 0 0) white */
+  --foreground: hsl(0, 0%, 14.5%);          /* oklch(0.145 0 0) very dark gray */
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 14.5%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 14.5%);
+  --primary: hsl(0, 0%, 20.5%);
+  --primary-foreground: hsl(0, 0%, 98.5%);
+  --secondary: hsl(0, 0%, 97%);
+  --secondary-foreground: hsl(0, 0%, 20.5%);
+  --muted: hsl(0, 0%, 97%);
+  --muted-foreground: hsl(0, 0%, 55.6%);
+  --accent: hsl(0, 0%, 97%);
+  --accent-foreground: hsl(0, 0%, 20.5%);
+  --destructive: hsl(27, 57%, 44%);         /* oklch(0.577 0.245 27.325) */
+  --border: hsl(0, 0%, 92.2%);
+  --input: hsl(0, 0%, 92.2%);
+  --ring: hsl(0, 0%, 70.8%);
+  --chart-1: hsl(41, 72%, 64.6%);
+  --chart-2: hsl(185, 34%, 60%);
+  --chart-3: hsl(227, 24%, 39.8%);
+  --chart-4: hsl(84, 43%, 82.8%);
+  --chart-5: hsl(70, 46%, 76.9%);
+  --sidebar: hsl(0, 0%, 98.5%);
+  --sidebar-foreground: hsl(0, 0%, 14.5%);
+  --sidebar-primary: hsl(0, 0%, 20.5%);
+  --sidebar-primary-foreground: hsl(0, 0%, 98.5%);
+  --sidebar-accent: hsl(0, 0%, 97%);
+  --sidebar-accent-foreground: hsl(0, 0%, 20.5%);
+  --sidebar-border: hsl(0, 0%, 92.2%);
+  --sidebar-ring: hsl(0, 0%, 70.8%);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: hsl(0, 0%, 14.5%);
+  --foreground: hsl(0, 0%, 98.5%);
+  --card: hsl(0, 0%, 20.5%);
+  --card-foreground: hsl(0, 0%, 98.5%);
+  --popover: hsl(0, 0%, 20.5%);
+  --popover-foreground: hsl(0, 0%, 98.5%);
+  --primary: hsl(0, 0%, 92.2%);
+  --primary-foreground: hsl(0, 0%, 20.5%);
+  --secondary: hsl(0, 0%, 26.9%);
+  --secondary-foreground: hsl(0, 0%, 98.5%);
+  --muted: hsl(0, 0%, 26.9%);
+  --muted-foreground: hsl(0, 0%, 70.8%);
+  --accent: hsl(0, 0%, 26.9%);
+  --accent-foreground: hsl(0, 0%, 98.5%);
+  --destructive: hsl(22, 54%, 50%);
+  --border: hsla(0, 0%, 100%, 0.1);
+  --input: hsla(0, 0%, 100%, 0.15);
+  --ring: hsl(0, 0%, 55.6%);
+  --chart-1: hsl(264, 68%, 48.8%);
+  --chart-2: hsl(162, 57%, 69.6%);
+  --chart-3: hsl(70, 46%, 76.9%);
+  --chart-4: hsl(304, 56%, 62.7%);
+  --chart-5: hsl(16, 58%, 64.5%);
+  --sidebar: hsl(0, 0%, 20.5%);
+  --sidebar-foreground: hsl(0, 0%, 98.5%);
+  --sidebar-primary: hsl(264, 68%, 48.8%);
+  --sidebar-primary-foreground: hsl(0, 0%, 98.5%);
+  --sidebar-accent: hsl(0, 0%, 26.9%);
+  --sidebar-accent-foreground: hsl(0, 0%, 98.5%);
+  --sidebar-border: hsla(0, 0%, 100%, 0.1);
+  --sidebar-ring: hsl(0, 0%, 55.6%);
 }
 
 @layer base {
@@ -140,4 +140,88 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: waveGradient 5s ease-in-out infinite;
+}
+
+.pdf-export {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  line-height: 1.5;
+}
+
+.pdf-export h2 {
+  border-bottom: 2px solid #4f46e5; /* Indigo */
+  padding-bottom: 4px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #4f46e5;
+}
+
+.pdf-export ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.pdf-export p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.pdf-export div[align="center"] {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pdf-export a {
+  color: #2563eb; /* Blue links */
+  text-decoration: none;
+}
+
+.pdf-export a:hover {
+  text-decoration: underline;
+}
+.pdf-export code {
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+}
+.pdf-export pre {
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+.pdf-export pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+.pdf-export img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+.pdf-export table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.pdf-export th,
+.pdf-export td {
+  border: 1px solid #e5e7eb; /* Light gray border */
+  padding: 8px;
+  text-align: left;
+}
+.pdf-export th {
+  background-color: #f3f4f6; /* Light gray header */
+  font-weight: bold;
 }

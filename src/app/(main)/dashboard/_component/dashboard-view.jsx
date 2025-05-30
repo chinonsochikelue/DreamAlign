@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import MarketTrends from "./market-trends";
 
 const DashboardView = ({ insights }) => {
   // Transform salary data for the chart
@@ -144,7 +145,7 @@ const DashboardView = ({ insights }) => {
       </div>
 
       {/* Salary Ranges Chart */}
-      <Card className="col-span-4">
+      <Card className="col-span-4 text-center">
         <CardHeader>
           <CardTitle>Salary Ranges by Role</CardTitle>
           <CardDescription>
@@ -184,6 +185,60 @@ const DashboardView = ({ insights }) => {
         </CardContent>
       </Card>
 
+      {/* Job Openings and Investment Trends */}
+      <Card className="col-span-4">
+        <CardHeader>
+          <CardTitle>Job Openings</CardTitle>
+          <CardDescription>Current job openings in your field</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="overflow-x-auto">
+            <table className="w-full table-auto text-sm">
+              <thead>
+                <tr className="text-left border-b border-muted">
+                  <th className="py-2">Job Title</th>
+                  <th>Company</th>
+                  <th>Location</th>
+                  <th>Salary Range</th>
+                  <th>Posted Date</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                {insights.jobListings.map((job) => (
+                  <tr key={job.id} className="border-b border-muted hover:bg-muted/30 transition">
+                    <td className="py-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="h-2 w-2 rounded-full bg-primary" />
+                        <span className="font-medium">{job.title}</span>
+                      </div>
+                    </td>
+                    <td>{job.company}</td>
+                    <td>{job.location}</td>
+                    <td>
+                      ${job.salaryRange.min}K - ${job.salaryRange.max}K
+                    </td>
+                    <td>{format(new Date(job.postedDate), "dd/MM/yyyy")}</td>
+                    <td className="max-w-xs truncate">{job.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </CardContent>
+      </Card>
+
+
+      <Card className="col-span-4">
+        <CardHeader>
+          <CardTitle>Investment Trends</CardTitle>
+          <CardDescription>
+            Current investment trends in the industry
+          </CardDescription>
+        </CardHeader>
+        <MarketTrends data={insights?.investmentTrends} />
+      </Card>
+
       {/* Industry Trends */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
@@ -221,6 +276,52 @@ const DashboardView = ({ insights }) => {
           </CardContent>
         </Card>
       </div>
+
+        {/* Industry Challenges */}
+        <Card>
+          <CardHeader className="text-center">
+            <CardTitle>Industry Challenges</CardTitle>
+            <CardDescription>
+              Current challenges faced by the industry
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <table className="w-full table-auto text-md">
+              <thead>
+                <tr className="text-left border-b border-muted">
+                  <th className="py-2">Challenge</th>
+                  <th>Impacts</th>
+                  <th>Solutions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {insights.industryChallenges.map((challenge, index) => (
+                  <tr key={index} className="border-b border-muted hover:bg-muted/30 transition">
+                    <td className="py-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="h-2 w-2 rounded-full bg-primary" />
+                        <span className="font-medium">{challenge.challenge}</span>
+                      </div>
+                    </td>
+                    <td>{challenge.impact}</td>
+                    <td>
+                      {challenge.solutions.length > 0 ? (
+                        <ol className="list-decimal pl-4 space-y-1">
+                          {challenge.solutions.map((sol, idx) => (
+                            <li key={idx}>{sol}</li>
+                          ))}
+                        </ol>
+                      ) : (
+                        "No solutions available"
+                      )}
+                    </td>
+
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </CardContent>
+        </Card>
     </div>
   );
 };

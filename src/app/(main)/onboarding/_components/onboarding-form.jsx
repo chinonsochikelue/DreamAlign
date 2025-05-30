@@ -52,9 +52,9 @@ const OnboardingForm = ({ industries }) => {
 
   const onSubmit = async (values) => {
     try {
-      const formattedIndustry = `${values.industry}-${values.subIndustry
+      const formattedIndustry = `${values.industry}+${values.subIndustry
         .toLowerCase()
-        .replace(/ /g, "-")}`;
+        .replace(/ /g, "+")}`;
 
       await updateUserFn({
         ...values,
